@@ -6,11 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/sylvie/InternSotatek/tests/gtest.cpp
-gtest/gtest.h
--
-ringbuffer.h
-/home/sylvie/InternSotatek/tests/ringbuffer.h
-
-/home/sylvie/InternSotatek/tests/ringbuffer.h
-
