@@ -23,21 +23,15 @@ void ringbuffer_init(unsigned short size) {
     rb.head = 0;
     rb.tail = 0;
     rb.count = 0;
-    pthread_mutex_init(&rb.lock, NULL)
+    pthread_mutex_init(&rb.lock, NULL);
 }
 
 int ringbuffer_isfull() {
-    pthread_mutex_lock(&rb.lock);
-    int res = rb.count == rb.size;
-    pthread_mutex_unlock(&rb.lock);
-    return res;
+    return rb.count == rb.size;
 }
 
 int ringbuffer_isempty() {
-    pthread_mutex_lock(&rb.lock);
-    int res = rb.count == 0;
-    pthread_mutex_unlock(&rb.lock);
-    return res;
+    return rb.count == 0;
 }
 
 int ringbuffer_add(int value) {
